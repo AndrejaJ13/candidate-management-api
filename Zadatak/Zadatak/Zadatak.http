@@ -1,0 +1,6 @@
+@Zadatak_HostAddress = http://localhost:5184
+
+GET {{Zadatak_HostAddress}}/api/candidates/search
+Accept: application/json
+
+###
