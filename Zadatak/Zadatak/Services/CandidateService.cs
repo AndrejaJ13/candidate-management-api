@@ -84,8 +84,21 @@ public class CandidateService(AppDbContext dbContext) : ICandidateService
         candidate.Email = request.Email.Trim();
         candidate.NormalizedEmail = normalizedEmail;
 
-        candidate.CandidateSkills.Clear();
-        foreach (var skillId in skillIds)
+        var requestedSkillIds = skillIds.ToHashSet();
+        var currentSkillIds = candidate.CandidateSkills
+            .Select(candidateSkill => candidateSkill.SkillId)
+            .ToHashSet();
+
+        var skillsToRemove = candidate.CandidateSkills
+            .Where(candidateSkill => !requestedSkillIds.Contains(candidateSkill.SkillId))
+            .ToList();
+
+        foreach (var candidateSkill in skillsToRemove)
+        {
+            candidate.CandidateSkills.Remove(candidateSkill);
+        }
+
+        foreach (var skillId in requestedSkillIds.Except(currentSkillIds))
         {
             candidate.CandidateSkills.Add(new CandidateSkill
             {
