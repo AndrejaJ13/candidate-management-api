@@ -1,0 +1,312 @@
+:root {
+  color: #18202f;
+  background: #f3f6f8;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  background: #19675d;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 42px;
+  padding: 0 16px;
+}
+
+button:hover {
+  background: #13534b;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #8ccfc6;
+  outline-offset: 2px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.workspace {
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.topbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 16px;
+}
+
+.eyebrow {
+  color: #6c7888;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.15rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.secondary-button {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  color: #243044;
+}
+
+.secondary-button:hover {
+  background: #e9eef2;
+}
+
+.danger-button {
+  background: #f2d8d5;
+  color: #8a2118;
+}
+
+.danger-button:hover {
+  background: #eec3be;
+}
+
+.status-message {
+  background: #fff7d7;
+  border: 1px solid #ead68a;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+}
+
+.toolbar,
+.form-panel,
+.candidate-card {
+  background: #ffffff;
+  border: 1px solid #dbe2e8;
+  border-radius: 8px;
+}
+
+.toolbar {
+  margin-bottom: 18px;
+  padding: 16px;
+}
+
+.search-form {
+  align-items: end;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(160px, 1fr) minmax(160px, 1fr) auto;
+}
+
+label {
+  color: #344154;
+  display: grid;
+  font-size: 0.88rem;
+  font-weight: 700;
+  gap: 7px;
+}
+
+input,
+select {
+  background: #ffffff;
+  border: 1px solid #c8d2dc;
+  border-radius: 6px;
+  color: #18202f;
+  min-height: 42px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.content-grid {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) 360px;
+}
+
+.section-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-heading span {
+  color: #6c7888;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.candidate-card {
+  padding: 16px;
+}
+
+.candidate-main {
+  align-items: start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.candidate-main p {
+  color: #5d6877;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.skill-pill {
+  align-items: center;
+  background: #e7f2ef;
+  border: 1px solid #b6d8d0;
+  border-radius: 999px;
+  color: #155c52;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  gap: 6px;
+  padding: 5px 9px;
+}
+
+.skill-pill button {
+  background: transparent;
+  color: #155c52;
+  min-height: auto;
+  padding: 0 2px;
+}
+
+.skill-pill button:hover {
+  background: transparent;
+  color: #8a2118;
+}
+
+.inline-skill-form {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 14px;
+}
+
+.side-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.form-panel {
+  display: grid;
+  gap: 13px;
+  padding: 18px;
+}
+
+.form-heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.small-button {
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.form-panel.compact {
+  gap: 12px;
+}
+
+.checkbox-group {
+  border: 1px solid #dbe2e8;
+  border-radius: 6px;
+  display: grid;
+  gap: 6px;
+  max-height: 188px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.checkbox-row {
+  align-items: center;
+  color: #243044;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  min-height: 28px;
+}
+
+.checkbox-row input {
+  min-height: auto;
+  width: auto;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .topbar,
+  .candidate-main {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-form,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

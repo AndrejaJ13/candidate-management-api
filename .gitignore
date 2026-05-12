@@ -21,3 +21,7 @@ TestResults/
 .DS_Store
 Thumbs.db
 .vscode/
+
+## Frontend
+node_modules/
+dist/

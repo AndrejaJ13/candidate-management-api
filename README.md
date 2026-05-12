@@ -11,6 +11,8 @@ This project is a .NET 8 Web API for managing job candidates and their skills. I
 
 ## How to Run
 
+### Backend
+
 From the repository root, where this `README.md` file is located:
 
 ```powershell
@@ -35,6 +37,24 @@ Swagger is available at:
 ```text
 http://localhost:5184/swagger
 ```
+
+### Optional React Frontend
+
+In a separate terminal, from the repository root:
+
+```powershell
+cd Frontend
+npm install
+npm run dev
+```
+
+The React app runs on:
+
+```text
+http://localhost:5173
+```
+
+The backend should be running on `http://localhost:5184` while using the frontend.
 
 ## Database
 
